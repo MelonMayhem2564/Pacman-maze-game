@@ -67,6 +67,15 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    public void Win()
+    {
+        if (currentPoints == 830)
+        {
+            gameoverUI.text = "GAME WIN!";
+            Destroy(gameObject);
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
